@@ -1,0 +1,80 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies (if you later add package managers)
+node_modules/
+bower_components/
+
+# Build outputs
+dist/
+build/
+.tmp/
+.cache/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+*.temp
+.temp/
+tmp/
+temp/
+
+# Backup files
+*.backup
+*.old
+backup/
+
+# Compressed files (usually not source)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Database files
+*.sql
+*.sqlite
+*.db
+
+# Custom (uncomment if needed)
+.user.ini
+.nojekyll
