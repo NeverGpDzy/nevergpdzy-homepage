@@ -65,7 +65,7 @@ This is a responsive personal homepage website built with HTML5 + CSS3 + JavaScr
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/NeverGpDzy/nevergpdzy-homepage.git
 cd your-repo-name
 ```
 
