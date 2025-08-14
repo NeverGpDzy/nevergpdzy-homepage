@@ -61,6 +61,39 @@ This is a responsive personal homepage website built with HTML5 + CSS3 + JavaScr
 
 ## 🚀 Getting Started
 
+### Font Configuration
+
+To improve website loading speed, the Google Fonts URLs have been replaced with custom CDN links:
+
+```css
+/* latin */
+/* Origin: https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2 */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://picture.nevergpdzy.cn/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+/* Origin: https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2 */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(https://picture.nevergpdzy.cn/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+```
+
+**For your own deployment:**
+- You can use the original Google Fonts URLs (shown in the `Origin` comments)
+- Or host the font files on your own CDN/OSS for better performance
+- Make sure to configure proper CORS settings if using a custom domain
+
+The original Google Fonts URLs are preserved in comments for easy reference and switching back if needed.
 ### Local Development
 
 1. **Clone the repository**
