@@ -1,5 +1,4 @@
 @import url(fontawesome-all.min.css);
-@import url("css.css");
 
 /*
 	Dimension by HTML5 UP
@@ -1285,7 +1284,15 @@ input, select, textarea {
 			height: 5.5rem;
 			line-height: 5.5rem;
 			border-radius: 100%;
+			overflow: hidden;
 		}
+
+			#header .logo img {
+				border-radius: 100%;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 
 			#header .logo .icon:before {
 				font-size: 2rem;
@@ -1316,6 +1323,11 @@ input, select, textarea {
 				#header .content .inner > :last-child {
 					margin-bottom: 0;
 				}
+
+		#header .content .inner h1,
+		#header .content .inner h3 {
+			text-transform: none;
+		}
 
 			#header .content p {
 				letter-spacing: 0.2rem;
@@ -1350,8 +1362,7 @@ input, select, textarea {
 					height: 2.75rem;
 					line-height: 2.75rem;
 					padding: 0 1.25rem 0 1.45rem;
-					text-transform: uppercase;
-					letter-spacing: 0.2rem;
+					text-transform: none;
 					font-size: 0.8rem;
 					border-bottom: 0;
 				}
