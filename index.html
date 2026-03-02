@@ -11,6 +11,17 @@
 		<link rel="stylesheet" href="css/css.css">
 		<link rel="stylesheet" href="css/main.css">
 		<noscript><link rel="stylesheet" href="css/noscript.css"></noscript>
+		<!-- 预连接 CDN -->
+		<link rel="preconnect" href="https://picture.nevergpdzy.cn" crossorigin>
+		<link rel="dns-prefetch" href="https://picture.nevergpdzy.cn">
+		<!-- 预加载正文字体（防止 FOUT）-->
+		<link rel="preload"
+		      href="https://picture.nevergpdzy.cn/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2"
+		      as="font" type="font/woff2" crossorigin>
+		<!-- 预加载背景图 -->
+		<link rel="preload"
+		      href="https://picture.nevergpdzy.cn/img_for_Typora/WarmCloudscapeBackground.png"
+		      as="image">
 	</head>
 	<body class="is-preload">
 	<!-- Wrapper -->
@@ -18,13 +29,18 @@
 			<!-- Header -->
 				<header id="header">
 					<div class="logo">
-						<img src="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png" alt="丁致宇" title="丁致宇">
+						<img src="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png"
+					     alt="丁致宇" title="丁致宇"
+					     width="88" height="88"
+					     fetchpriority="high"
+					     decoding="async">
 					</div>
 					<div class="content">
 						<div class="inner">
 							<h1>NeverGpDzy</h1>
-							<h3>勤而自律 心似明镜 永不放弃</h3>
-							<h3>i@nevergpdzy.cn</h3>
+							<p id="greeting"></p>
+							<h3 id="slogan" aria-label="勤而自律 心似明镜 永不放弃"></h3>
+							<h3 id="email-copy" data-email="i@nevergpdzy.cn" title="点击复制邮箱">i@nevergpdzy.cn</h3>
 						</div>
 					</div>
 					<nav>
@@ -47,10 +63,6 @@
 		<div id="bg"></div>
 
 	<!-- Scripts -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/browser.min.js"></script>
-		<script src="js/breakpoints.min.js"></script>
-		<script src="js/util.js"></script>
-		<script src="js/main.js"></script>
+		<script src="js/main.js" defer></script>
 	</body>
 </html>
