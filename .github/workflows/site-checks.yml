@@ -1,0 +1,52 @@
+name: Site Checks
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "404.html"
+      - "verification.html"
+      - "css/**"
+      - "js/**"
+      - ".github/workflows/site-checks.yml"
+      - ".github/scripts/check-site.ps1"
+      - ".htmlhintrc"
+      - "CNAME"
+  push:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "404.html"
+      - "verification.html"
+      - "css/**"
+      - "js/**"
+      - ".github/workflows/site-checks.yml"
+      - ".github/scripts/check-site.ps1"
+      - ".htmlhintrc"
+      - "CNAME"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Lint HTML
+        run: npx --yes htmlhint@1 --config .htmlhintrc index.html 404.html verification.html
+
+      - name: Validate local assets and required metadata
+        shell: pwsh
+        run: ./.github/scripts/check-site.ps1

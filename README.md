@@ -1,217 +1,95 @@
 # NeverGpDzy Personal Homepage
 
-<div align="center">
-  <img src="https://picture.nevergpdzy.cn/img_for_Typora/OIG%20(3).png" alt="Logo" width="120" height="120">
-  <h3 align="center">个人主页 | Personal Homepage</h3>
-  <p align="center">
-    勤而自律，心似明镜，永不放弃。
-    <br />
-    一个简洁优雅的个人主页网站
-    <br />
-    <a href="https://nevergpdzy.cn"><strong>访问网站 »</strong></a>
-  </p>
-</div>
+Static personal homepage for `nevergpdzy.cn`.
 
-## 📋 Project Overview
+## Overview
 
-This is a responsive personal homepage website built with HTML5 + CSS3 + JavaScript, featuring a minimalist modern design style that showcases personal information and provides links to various projects and resources.
+This repository is a zero-build static site built with plain HTML, CSS, and JavaScript.
+The site is designed to be deployed directly from the repository root and is suitable for GitHub Pages or any other static host.
 
-## ✨ Features
+Current entrypoints:
 
-- 🎨 **Modern Design** - Clean and elegant interface with dark theme and glass morphism effects
-- 📱 **Responsive Layout** - Perfect compatibility with desktop, tablet, and mobile devices
-- ⚡ **Smooth Animations** - Fluid transition animations and interactive effects
-- 🌐 **Multi-portal Navigation** - Integrated links to personal blog, resume, knowledge base, and other sub-sites
-- 🖼️ **Dynamic Background** - Beautiful background images with overlay effects
-- 🔒 **Content Protection** - Disabled right-click menu and text selection to protect page content
+- `index.html`: main homepage
+- `404.html`: custom 404 page
+- `verification.html`: domain or platform verification page
 
-## 🛠️ Tech Stack
+## Features
 
-- **Frontend Framework**: Native HTML5 + CSS3 + JavaScript
-- **JavaScript Libraries**: 
-  - jQuery 3.x - DOM manipulation and event handling
-  - Particles.js - Particle animation effects (optional)
-- **CSS Preprocessing**: Native CSS3 with Flexbox layout
-- **Icon Fonts**: Font Awesome 5
-- **Build Tools**: No build process required, ready to use
+- Responsive single-page homepage
+- Custom external navigation to blog, docs, resume, and other sub-sites
+- Time-based greeting and typewriter-style slogan
+- One-click email copy interaction
+- Konami-code easter egg
+- No build step required
 
-## 📁 Project Structure
+## Project Structure
 
-```
+```text
 .
-├── 404.html                 # 404 error page
-├── index.html               # Main page
-├── verification.html        # Verification page
-├── README.md               # Project documentation
-├── css/                    # Stylesheets directory
-│   ├── main.css           # Main stylesheet
-│   ├── css.css            # Font styles
-│   ├── fontawesome-all.min.css  # Font Awesome icons
-│   └── noscript.css       # Styles for no JavaScript
-└── js/                     # JavaScript files directory
-    ├── jquery.min.js       # jQuery library
-    ├── jquery.min_1.js     # jQuery backup version
-    ├── main.js            # Main interaction logic
-    ├── util.js            # Utility functions
-    ├── browser.min.js     # Browser detection
-    ├── breakpoints.min.js # Responsive breakpoints
-    ├── particles.min.js   # Particle effects library
-    └── particles-init.js  # Particle effects initialization
+|-- .github/
+|   `-- workflows/
+|-- css/
+|-- js/
+|-- 404.html
+|-- CNAME
+|-- index.html
+|-- verification.html
+`-- README.md
 ```
 
-## 🚀 Getting Started
+## Local Development
 
-### Font Configuration
+You can open `index.html` directly in a browser, or serve the repository with a lightweight local server.
 
-To improve website loading speed, the Google Fonts URLs have been replaced with custom CDN links:
+Python 3:
 
-```css
-/* latin */
-/* Origin: https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2 */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://picture.nevergpdzy.cn/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-/* Origin: https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2 */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(https://picture.nevergpdzy.cn/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-```
-
-**For your own deployment:**
-- You can use the original Google Fonts URLs (shown in the `Origin` comments)
-- Or host the font files on your own CDN/OSS for better performance
-- Make sure to configure proper CORS settings if using a custom domain
-
-The original Google Fonts URLs are preserved in comments for easy reference and switching back if needed.
-### Local Development
-
-1. **Clone the repository**
 ```bash
-git clone https://github.com/NeverGpDzy/nevergpdzy-homepage.git
-cd your-repo-name
-```
-
-2. **Direct Opening**
-   - Double-click the `index.html` file to open in browser
-   - Or use a local server (recommended)
-
-3. **Using Local Server** (Optional)
-
-Using Python:
-```bash
-# Python 3
 python -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
 ```
 
-Using Node.js:
-```bash
-# Install http-server
-npm install -g http-server
+Then open `http://localhost:8000`.
 
-# Run
-http-server
-```
+## Deployment
 
-### Deployment
+### GitHub Pages
 
-This project is a pure static website and can be deployed to any static hosting service:
+This repository now includes a GitHub Pages deployment workflow.
 
-- **GitHub Pages**
-- **Vercel**
-- **Netlify**
-- **Cloud Server** (Nginx/Apache)
-- **Object Storage** (OSS/COS + CDN)
+1. In the repository settings, set Pages to use `GitHub Actions` as the source.
+2. Keep `CNAME` aligned with the production domain.
+3. Push changes to `main` to trigger deployment.
 
-## 🎨 Customization
+### Other Static Hosts
 
-### Modify Personal Information
+You can also deploy the repository root directly to services such as Vercel, Netlify, Nginx, OSS, or any CDN-backed static host.
 
-Edit the relevant content in `index.html`:
+## GitHub Actions
 
-```html
-<!-- Change title -->
-<title>Your Name</title>
+The repository includes three workflows:
 
-<!-- Change main title and subtitle -->
-<h1 style="text-transform: none;">Your Name</h1>
-<h3 style="text-transform: none;">Your Motto</h3>
-<h3 style="text-transform: none;">your-email@example.com</h3>
+- `Site Checks`: runs HTML linting plus repository-specific validation for required metadata and local asset references
+- `Deploy GitHub Pages`: publishes the repository root to GitHub Pages on pushes to `main`
+- `Links Health`: runs on a weekly schedule to check external links and hosted assets
 
-<!-- Modify navigation links -->
-<nav>
-    <ul>
-        <li><a href="your-link" target="_blank">Link Name</a></li>
-        <!-- More links... -->
-    </ul>
-</nav>
-```
+## Customization
 
-### Change Background Image
+Update content in `index.html` to change:
 
-Modify the background image URL in `css/main.css`:
+- site title and metadata
+- avatar, greeting, and slogan
+- external navigation links
+- footer text
 
-```css
-#bg:after {
-    background-image: url("your-background-image-url");
-}
-```
+Update styles in `css/main.css` to change:
 
-### Customize Color Theme
+- background image
+- colors
+- spacing and layout
 
-Modify the relevant color variables in `css/main.css`:
+Update font definitions in `css/css.css` if you want to switch CDN or self-host fonts.
 
-```css
-body {
-    background: #1b1f22;  /* Background color */
-    color: #ffffff;       /* Text color */
-}
-```
+## Notes
 
-## 📄 License
-
-This project is open source under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-Based on the Dimension template from [HTML5 UP](https://html5up.net/).
-
-## 👤 Author
-
-- **NeverGpDzy**
-- Email: i@nevergpdzy.cn
-- Website: [nevergpdzy.cn](https://nevergpdzy.cn)
-
-## 🤝 Contributing
-
-Issues and Pull Requests are welcome!
-
-## 📞 Contact
-
-If you have any questions or suggestions, please contact me through:
-
-- 📧 Email: i@nevergpdzy.cn
-- 🌐 Website: [nevergpdzy.cn](https://nevergpdzy.cn)
-- 📝 Blog: [blog.nevergpdzy.cn](https://blog.nevergpdzy.cn)
-
-## 🙏 Acknowledgments
-
-- [HTML5 UP](https://html5up.net/) - For providing excellent web templates
-- [Font Awesome](https://fontawesome.com/) - Icon library
-- [jQuery](https://jquery.com/) - JavaScript library
-
----
-
-<p align="center">Made with ❤️ by NeverGpDzy</p>
-<p align="center">© 2023-2025 NeverGpDzy</p>
+- The current site does not use a frontend framework or package-based build pipeline.
+- `README.md` has been aligned with the current codebase and workflows in this repository.
+- The original visual foundation is based on the Dimension template from HTML5 UP.
